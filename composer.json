@@ -1,0 +1,6 @@
+{
+    "require": {
+        "vimeo/psalm": "^5.18",
+        "phpstan/phpstan": "^1.10"
+    }
+}

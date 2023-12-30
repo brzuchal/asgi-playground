@@ -1,0 +1,29 @@
+### Not Found
+GET http://localhost:8888/
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 404, "Response status is not 404");
+    });
+%}
+
+### Hello World
+GET http://localhost:8888/hello
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+
+### Hello World
+POST http://localhost:8888/hello
+Content-Type: application/x-www-form-urlencoded
+
+name=Michał
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
